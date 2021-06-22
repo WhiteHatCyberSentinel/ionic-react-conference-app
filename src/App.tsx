@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, IonSplitPane } from '@ionic/react';
+import { IonApp, IonRouterOutlet, IonSplitPane, IonMenuToggle } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 
 import Menu from './components/Menu';
@@ -73,7 +73,7 @@ const IonicApp: React.FC<IonicAppProps> = ({ darkMode, schedule, setIsLoggedIn, 
     ) : (
         <IonApp className={`${darkMode ? 'dark-theme' : ''}`}>
           <IonReactRouter>
-            <IonSplitPane contentId="main">
+            {/* <IonSplitPane contentId="main"> */}
               <Menu />
               <IonRouterOutlet id="main">
                 {/*
@@ -94,7 +94,7 @@ const IonicApp: React.FC<IonicAppProps> = ({ darkMode, schedule, setIsLoggedIn, 
                 }} />
                 <Route path="/" component={HomeOrTutorial} exact />
               </IonRouterOutlet>
-            </IonSplitPane>
+            {/*</IonSplitPane>*/}
           </IonReactRouter>
         </IonApp>
       )

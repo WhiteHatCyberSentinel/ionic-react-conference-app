@@ -78,7 +78,7 @@ const SpeakerDetail: React.FC<SpeakerDetailProps> = ({ speaker }) => {
   }
 
   if (!speaker) {
-    return <div>Speaker not found</div>
+    return <div>Volunteer not found</div>
   }
 
   return (

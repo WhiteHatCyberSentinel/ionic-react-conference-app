@@ -25,7 +25,7 @@ type SessionDetailProps = OwnProps & StateProps & DispatchProps;
 const SessionDetail: React.FC<SessionDetailProps> = ({ session, addFavorite, removeFavorite, favoriteSessions }) => {
 
   if (!session) {
-    return <div>Session not found</div>
+    return <div>Serving Opportunity Not Found</div>
   }
 
   const isFavorite = favoriteSessions.indexOf(session.id) > -1;

@@ -17,7 +17,7 @@ export const initialState: AppState = {
   },
   user: {
     hasSeenTutorial: false,
-    darkMode: false,
+    darkMode: true,
     isLoggedin: false,
     loading: false
   }

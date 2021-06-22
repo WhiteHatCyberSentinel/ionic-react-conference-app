@@ -53,11 +53,14 @@ const Support: React.FC<SupportProps> = () => {
               </IonTextarea>
             </IonItem>
 
-            {formSubmitted && messageError && <IonText color="danger">
-              <p className="ion-padding-start">
-                Support message is required
-              </p>
-            </IonText>}
+            {
+              formSubmitted && messageError &&
+              <IonText color="danger">
+                <p className="ion-padding-start">
+                  Support message is required
+                </p>
+              </IonText>
+            }
           </IonList>
 
           <IonRow>

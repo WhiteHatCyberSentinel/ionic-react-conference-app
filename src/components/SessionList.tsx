@@ -38,7 +38,7 @@ const SessionList: React.FC<SessionListProps> = ({ addFavorite, removeFavorite, 
     return (
       <IonList>
         <IonListHeader>
-          No Sessions Found
+          Serving Opportunity Not Found
         </IonListHeader>
       </IonList>
     );
