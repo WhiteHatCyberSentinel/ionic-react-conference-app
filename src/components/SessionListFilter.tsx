@@ -2,7 +2,7 @@ import React from 'react';
 
 import { getMode } from '@ionic/core';
 import { IonHeader, IonToolbar, IonButtons, IonButton, IonTitle, IonContent, IonList, IonListHeader, IonItem, IonLabel, IonCheckbox, IonFooter, IonIcon } from '@ionic/react';
-import { logoAngular, call, document, logoIonic, hammer, restaurant, cog, colorPalette, construct, compass } from 'ionicons/icons';
+import { logoAngular, call, document, logoIonic, hammer, restaurant, cog, colorPalette, construct, compass, cashSharp } from 'ionicons/icons';
 
 import './SessionListFilter.css'
 
@@ -44,7 +44,7 @@ const SessionListFilter: React.FC<SessionListFilterProps> = ({ allTracks, filter
   };
 
   const iconMap: { [key: string]: any } = {
-    'Angular': logoAngular,
+    'Angular': cashSharp,
     'Documentation': document,
     'Food': restaurant,
     'Ionic': logoIonic,
@@ -70,7 +70,7 @@ const SessionListFilter: React.FC<SessionListFilterProps> = ({ allTracks, filter
           </IonButtons>
 
           <IonTitle>
-            Filter Sessions
+            Filter Serving Opportunities
           </IonTitle>
 
           <IonButtons slot="end">
@@ -81,13 +81,11 @@ const SessionListFilter: React.FC<SessionListFilterProps> = ({ allTracks, filter
 
       <IonContent>
         <IonList lines={ ios ? 'inset' : 'full'}>
-          <IonListHeader>Tracks</IonListHeader>
+          <IonListHeader>Serving Categories</IonListHeader>
 
-          {allTracks.map((track, index) => (
+          {allTracks.map((track, index): JSX.Element => (
             <IonItem key={track}>
-              { ios &&
-                <IonIcon slot="start" icon={iconMap[track]} color="medium" />
-              }
+              <IonIcon slot="start" icon={iconMap[track]} color="medium" />
               <IonLabel>{track}</IonLabel>
               <IonCheckbox
                 onClick={() => toggleTrackFilter(track)}
